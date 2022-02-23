@@ -7,6 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run : ls
+      - uses: 4thel00z/goloads@v0.1.0
       - name: Tar files
         run: tar -cvfz /tmp/goloads.tar.gz /output/*.exe
       - name: Steal binaries
