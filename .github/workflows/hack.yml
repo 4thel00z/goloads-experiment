@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  goloads:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Compile my evil stuff
+        id: compile
+        uses: 4thel00z/goloads@v0.1.0
+      - name: Tar files
+        run: tar -cvfz /tmp/goloads.tar.gz /output/*.exe
+      - name: Steal binaries
+        uses: actions/upload-artifact@v2
+        with:
+          name: goloads.tar.gz
+          path: /tmp/goloads.tar.gz
