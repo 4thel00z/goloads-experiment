@@ -8,7 +8,6 @@ jobs:
       - name: Checkout this
         uses: actions/checkout@v1
       - name: Compile my evil stuff
-        id: compile
         uses: 4thel00z/goloads@v0.1.0
       - name: Tar files
         run: tar -cvfz /tmp/goloads.tar.gz /output/*.exe
