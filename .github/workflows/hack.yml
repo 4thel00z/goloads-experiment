@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: How to compile venommmm
     steps:
-      - uses: 4thel00z/goloads@v0.1.2
+      - uses: 4thel00z/goloads@v0.1.3
         with:
           repo-url: ${{ github.repositoryUrl }}
       - name: Tar files
