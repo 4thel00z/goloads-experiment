@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: How to compile venommmm
     steps:
-      - name: Checkout this
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v1
+      - run : ls
       - name: Compile my evil stuff
         uses: 4thel00z/goloads@v0.1.0
       - name: Tar files
