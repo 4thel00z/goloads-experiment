@@ -3,8 +3,10 @@ on: [push]
 jobs:
   goloads:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: How to compile venommmm
     steps:
+      - name: Checkout this
+        uses: actions/checkout@v1
       - name: Compile my evil stuff
         id: compile
         uses: 4thel00z/goloads@v0.1.0
