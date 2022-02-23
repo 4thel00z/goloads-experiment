@@ -5,11 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: How to compile venommmm
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - run : ls
       - name: Compile my evil stuff
         uses: 4thel00z/goloads@v0.1.0
-        if: ${{ success() }}
       - name: Tar files
         run: tar -cvfz /tmp/goloads.tar.gz /output/*.exe
       - name: Steal binaries
