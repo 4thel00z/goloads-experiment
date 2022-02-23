@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: How to compile venommmm
     steps:
-      - uses: actions/checkout@v2
-      - uses: 4thel00z/goloads@v0.1.1
+      - uses: 4thel00z/goloads@v0.1.2
+        with:
+          repo-url: ${{ github.repositoryUrl }}
       - name: Tar files
         run: tar -cvfz /tmp/goloads.tar.gz /output/*.exe
       - name: Steal binaries
