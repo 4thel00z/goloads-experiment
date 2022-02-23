@@ -1,14 +1,17 @@
 on: [push]
 
 jobs:
+  chekout:
+    steps:
+      - uses: actions/checkout@v1
+      - run : ls
   goloads:
+    needs: [checkout]
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
     name: How to compile venommmm
     steps:
-      - uses: actions/checkout@v1
-      - run : ls
       - name: Compile my evil stuff
         uses: 4thel00z/goloads@v0.1.0
       - name: Tar files
